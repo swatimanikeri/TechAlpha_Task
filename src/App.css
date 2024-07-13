@@ -1,0 +1,199 @@
+.App{
+  min-height:100vh ;
+  min-width:100vw ;
+  width: 100vw;
+  height: 100vh;
+  background-color: #feffff;
+  margin-top: 10px;
+}
+
+/* #navbar css */
+img{
+  height: 35px;
+}
+
+#navbarSupportedContent{
+  display:flex;
+  justify-content: space-between;
+  font-size: larger;
+  margin-left: 20px;
+  
+}
+
+.nav-link{
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-right: 50px;
+  font-weight: 800;
+}
+
+.nav-item:hover,.nav-item.active{
+  box-shadow: rgba(0,0,0,0,1);
+  background-color: rgb(135, 127, 127);
+  transition: 2s;
+}
+
+.search{
+  margin-left: 100px;
+}
+
+.searchBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  width: 700px;
+}
+
+
+/* #mainContainer css */
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Repeat columns with minimum width of 200px */
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+  background-color: black;
+  margin-top: 10px;
+}
+.demo{
+  height: 100%;
+  width: 100%;
+   object-fit: cover;
+}
+
+.pin {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+   position: relative;
+ }
+
+.pin img {
+  width: 10%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.pin .mainPic{
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+ gap:20px;
+}
+
+.pin-small {
+  grid-row: span 1;
+}
+
+.pin-medium {
+  grid-row: span 2;
+}
+
+.pin-large {
+  grid-row: span 3;
+}
+
+/* .Pin .content {
+  width: 100%;
+  height: 50px;
+  
+  backdrop-filter: blur(5px);
+ 
+}
+
+.Pin .content .icon .h4 {
+  margin: 0; 
+  display: inline-block; 
+  flex: 1;
+  color: antiquewhite;
+}
+
+.Pin .content .icon {
+  width:100%;
+  height: 50px;
+  background-color: rgba(91, 19, 19, 0.2);
+  position: absolute;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+}
+
+.Pin .content .icon a {
+  display: flex; 
+  align-items: center; 
+  justify-content: center
+}
+
+.Pin .content .icon img {
+  max-width: 100%; 
+  height: auto; 
+} */
+
+.mainPic.large {
+  
+  transform: scale(1.5); 
+}
+
+@media (max-width: 768px) {
+  #navbarSupportedContent {
+      flex-direction: column; /* Stacks items vertically on small screens */
+      align-items: center;
+  }
+
+  .nav-link {
+      margin: 10px 0; /* Adds margin for spacing */
+  }
+
+  .search {
+      margin-left: 0;
+  }
+
+  .searchBar {
+      width: 100%; /* Adjusts width on small screens */
+  }
+}
+
+@media (max-width: 600px) {
+.navbar {
+  justify-content: flex-start; /* Align items to the left on smaller screens */
+  overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+  overflow-y: hidden; /* Hide vertical overflow */
+  flex-wrap: nowrap; /* Ensure items stay on a single line */
+}
+
+.nav-item {
+  padding: 10px 15px; /* Increase padding for better touch interaction */
+}
+.header {
+  flex-direction: column; /* Stack items vertically on smaller screens */
+  align-items: stretch; /* Stretch items to full width */
+}
+
+.search-bar {
+  margin-right: 0; /* Remove right margin */
+  margin-bottom: 10px; /* Add bottom margin for separation */
+}
+
+.navbar {
+  justify-content: center; /* Center items on smaller screens */
+}
+
+  .navbar-nav {
+    flex-direction: row; /* Ensure navbar items stay in a row */
+    justify-content: space-around; /* Distribute items evenly */
+  }
+
+
+}
